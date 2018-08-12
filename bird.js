@@ -1,14 +1,16 @@
 function Bird() {
-    this.y = height/2;
+    this.y = height / 2;
+    // Margin-left from the side of the screen
     this.x = 64;
 
     this.fall = 0.5;
     this.fly = -12;
     this.speed = 0;
 
+    // Shape and size of the acual flying object
     this.show = function() {
         fill(255);
-        ellipse(this.x, this.y, 64, 32);
+        ellipse(this.x, this.y, 50, 18);
     }
 
     this.up = function() {

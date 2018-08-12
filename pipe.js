@@ -1,8 +1,14 @@
 function Pipe() {
-    this.top = random(height/2);
-    this.bottom = random(height/2);
+
+    // Size of the space created, 50 at the moment.
+    var space = 50;
+    // Where the space should be located on the screen
+    var center = random(space, height - space);
+
+    this.top = center - space / 2;
+    this.bottom = height - (center + space / 2);
     this.x = width;
-    this.w = 20;
+    this.w = 22;
     this.move = 4;
 
     this.highlight = false;
@@ -38,7 +44,7 @@ function Pipe() {
             return true;
         } else {
             return false;
+
         }
     }
-
 }

@@ -1,8 +1,9 @@
 var bird;
 var pipes = [];
 
+// Creating the sketch canvas (size of the play area window)
 function setup() {
-  createCanvas(1200, 600);
+  createCanvas(1425, 600);
   bird = new Bird();
   pipes.push(new Pipe());
 }
@@ -27,12 +28,13 @@ function draw() {
   bird.update();
   bird.show();
 
-  // Adds a new pipe to the array every 95th frames
-  if (frameCount % 95 == 0) {
+  // Adds a new pipe to the array every 120th frames
+  if (frameCount % 120 == 0) {
     pipes.push(new Pipe());
   }
 }
 
+// Function controlling which key you press to move the bird.js object
 function keyPressed() {
   if (key == ' ') {
     bird.up();
