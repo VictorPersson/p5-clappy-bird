@@ -10,7 +10,7 @@ function Bird() {
     // Shape and size of the acual flying object
     this.show = function() {
         fill(255);
-        ellipse(this.x, this.y, 50, 18);
+        ellipse(this.x, this.y, 52, 20);
     }
 
     this.up = function() {
