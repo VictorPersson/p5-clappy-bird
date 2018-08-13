@@ -27,6 +27,8 @@ function Pipe() {
 
     // Draws the Pipes and defines a random size of each opening
     this.show = function() {
+        noStroke();
+        // noStroke Removes the red outlines created by the slider threshold function
         fill(255);
         if (this.highlight) {
             fill(255, 0, 0);

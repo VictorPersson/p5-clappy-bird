@@ -1,6 +1,7 @@
 var bird;
 var pipes = [];
 var mic;
+var slider;
 
 // Creating the sketch canvas (size of the play area window)
 function setup() {
@@ -11,6 +12,8 @@ function setup() {
   mic.start();
   bird = new Bird();
   pipes.push(new Pipe());
+  // Generates a slider with an increse of 0.01
+  slider = createSlider(0, 1, 0.2, 0.01);
 }
 
 function draw() {
@@ -40,20 +43,28 @@ function draw() {
     pipes.push(new Pipe());
   }
 
-  if (vol > 0.2) {
+  var threshold = slider.value();
+
+  if (vol > threshold) {
     bird.up();
   } 
   // Drawing a rectangle which will fill up with a green color wehn volume is picked up
   fill(0, 190 , 0);
   var y = map(vol, 0, 2, height, 0);
   rect(width - 50, y, 50, height - y);
+
+  // Drawing the threshold the slider controls
+  var ty = map(threshold, 0, 1, height, 0);
+  stroke(255, 0, 0);
+  strokeWeight(5);
+  line(width -50, ty, width, ty);
+
   
 }
 
 // Function controlling which key you press to move the bird.js object
 function keyPressed() {
-  //if (key == ' ') {
-    if (vol > 0.2) { 
+  if (key == ' ') {
       bird.up();
   }
 }

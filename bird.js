@@ -10,6 +10,8 @@ function Bird() {
     // Shape and size of the acual flying object
     this.show = function() {
         fill(255);
+        noStroke();
+        // noStroke Removes the red outlines created by the slider threshold function
         ellipse(this.x, this.y, 52, 20);
     }
 
