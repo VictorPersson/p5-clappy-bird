@@ -1,7 +1,7 @@
 function Pipe() {
 
-    // Size of the space created, 50 at the moment.
-    var space = 50;
+    // Size of the space created, a random number bewteen 20 and window hight 2
+    var space = random(28 , height / 4);
     // Where the space should be located on the screen
     var center = random(space, height - space);
 
