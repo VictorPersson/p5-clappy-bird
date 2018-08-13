@@ -11,5 +11,5 @@ It's all made with JavaScript using the [p5 library](https://p5js.org/)
   <li>Open the index.html file</li>
   <li>Play the game, control the object by clapping your hands</li>
 </ol>
-<br>Game idea and code insipration from [Daniel Shiffman](https://github.com/shiffman) . Much if not all credit to the all mighty.  
+<br>Game idea and code inspiration from Daniel Shiffman https://github.com/shiffman Much if not all credit to the all mighty.  
 
